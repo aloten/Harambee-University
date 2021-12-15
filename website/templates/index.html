@@ -9,7 +9,7 @@
   </head>
   <body>
     <h1>Welcome to Harambee University</h1>
-    <form method="POST">
+    <form onsubmit="return false;" method="POST" name="newStudent">
       <input type="text" name="firstName" placeholder="First name" required />
       <input type="text" name="lastName" placeholder="Last name" required />
       <input
@@ -21,7 +21,9 @@
         value="2026"
         required
       />
-      <input type="submit" value="Submit" />
+      <input type="submit" value="Submit" onclick="addStudent()" />
     </form>
+
+    <div class="students"></div>
   </body>
 </html>

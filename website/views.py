@@ -1,13 +1,9 @@
-from flask import Blueprint, render_template, request
+from flask import Blueprint, render_template, request, jsonify
+import json
 
 views = Blueprint('views', __name__)
 
-@views.route('/', methods=['GET', 'POST'])
+@views.route('/', methods=['GET'])
 def index():
-  if request.method == 'POST':
-    firstName = request.form.get('firstName')
-    lastName = request.form.get('lastName')
-    classYear = request.form.get('classYear')
-  data = request.form
-  print(data)
   return render_template('index.html')
+
